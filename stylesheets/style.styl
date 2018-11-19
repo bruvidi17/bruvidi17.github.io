@@ -1,0 +1,305 @@
+// Header
+header.header
+	width 100%
+	height 100px
+	display flex
+	align-items center
+	justify-content space-between
+	padding-left 20px
+	padding-right 20px
+	position fixed
+	top 0
+	left 0
+	background-color rgba(white, .9)
+	z-index 99
+	> .brand
+		height 62px
+		user-select none
+
+		> img
+			height 100%
+
+	> nav.navigation
+		display inline-block
+
+		> .link
+			text-transform uppercase
+			text-decoration none
+			color $gray
+			font-size .9em
+			font-weight 600
+			user-select none
+			display inline-block
+
+			& + .link
+				margin-left 15px
+
+			&.-coming-soon
+				font-weight 300
+				font-style italic
+				cursor not-allowed
+
+		.select
+			display inline-block
+			vertical-align middle
+			height 40px
+			width 53.3333px
+			margin-left 15px
+			cursor pointer
+			position relative
+			padding-top 5px
+			padding-bottom 5px
+
+			> img
+				width 100%
+				height 100%
+
+			> .dropdown
+				display none
+				position absolute
+				top 45px
+
+				> .item
+					height 40px
+					width 53.3333px
+					padding-top 5px
+					padding-bottom 5px
+
+					> img
+						width 100%
+						height 100%
+
+			&.-show
+				> .dropdown
+					blockFadeIn()
+// Main
+main.main
+	> section
+		margin-top 100px
+		width 100%
+		max-width $screen-device-large
+		margin-left auto
+		margin-right auto
+		padding-left 60px
+		padding-right 60px
+
+
+	//Apresentation
+	> section.apresentation
+		min-height calc(100vh - 170px)
+		display flex
+		flex-direction column
+		justify-content center
+
+
+		> .title
+			font-size 2.25em
+			font-weight 300
+			line-height 1.2em
+			fadeDown()
+
+			> strong
+				font-weight 600
+
+		> .description
+			max-width 680px
+			font-size 1.2em
+			font-weight 300
+			line-height 1.4em
+			margin-top 20px
+			margin-bottom 20px
+			fadeIn()
+
+		> .more
+			background linear-gradient(to right, $blue , $purple);
+			width 100px
+			height 45px
+			color white
+			font-size 1.2em
+			font-weight 400
+			cursor pointer
+			fadeIn()
+
+			&:hover
+				background linear-gradient(to right, $blue-hover , $purple-hover);
+
+
+	//Substances
+	section.substances
+		padding-top 120px
+
+		> .title
+			width 100%
+			font-size 1.8em
+			font-weight 600
+			text-align center
+			margin-bottom 80px
+
+			> img
+				vertical-align middle
+				height 36px
+				margin-right 10px
+
+		> .drugs
+			font-size 1.2em
+			line-height 1.4em
+			font-weight 300
+			display inline-block
+			width calc(50% - 4px)
+			vertical-align top
+			text-align center
+
+			> .drugs-img
+				width 100%
+				padding-left 60px
+				padding-right 60px
+				max-width 320px
+				height 260.86px
+				display inline-flex
+				justify-content center
+				align-items center
+
+				img
+					width 100%
+					margin-bottom 45px
+
+			.more
+				background linear-gradient(to right, $blue , $purple);
+				width 100px
+				padding 10px
+				display inline-block
+				margin-top 20px
+				color white
+				font-size 1em
+				font-weight 400
+				cursor pointer
+				fadeIn()
+
+				&:hover
+					background linear-gradient(to right, $blue-hover , $purple-hover);
+
+			> .sub
+				width 100%
+				font-size 1.2em
+				font-weight 600
+				text-align center
+				margin-bottom 20px
+
+			> .text
+				padding-left 10px
+				padding-right 10px
+				> p
+					text-align justify
+					& + p
+						margin-top 15px
+
+	// Video
+	section.video
+		padding-top 120px
+
+		.title
+			margin-bottom 30px
+
+	// Info-Anfetamina/Metilfenidato
+	section.info
+		padding-top 120px
+
+		> .title
+			width 100%
+			font-size 1.8em
+			font-weight 600
+			text-align center
+			margin-bottom 80px
+
+
+		> .infographic
+			font-size 1.2em
+			line-height 1.4em
+			font-weight 300
+			display inline-block
+			width 100%
+			vertical-align top
+			text-align center
+
+			> .drugs-info
+				width 100%
+				padding-left 60px
+				padding-right 60px
+				max-width 600px
+				height 260.86px
+				display inline-flex
+				justify-content center
+				align-items center
+
+				img
+					width 100%
+					margin-bottom 45px
+
+			> .text
+				padding-left 10px
+				padding-right 10px
+				> p
+					text-align justify
+					& + p
+						margin-top 15px
+
+	// Authors
+	section.authors
+		padding-top 150px
+
+		> h2.title
+			width 100%
+			font-size 1.8em
+			font-weight 600
+			text-align center
+			margin-bottom 80px
+
+	// Contact
+	section.references
+		width 100%
+		background linear-gradient(to right, $blue , $purple);
+		max-width none
+		padding-top 100px
+		padding-bottom 100px
+		margin-top 150px
+		text-align center
+
+		> h3.description
+			width 100%
+			color white
+			font-size 1em
+			font-weight 400
+			display inline-block
+			line-height 1.4em
+			margin-bottom 100px
+			padding-left 20px
+			padding-right 20px
+
+		> ul.list
+			width 100%
+			max-width $screen-device-xlarge
+			margin-left auto
+			margin-right auto
+			display flex
+			justify-content space-between
+			flex-wrap wrap
+
+			> li.item
+				width 100%
+				text-align center
+
+				& + li.item
+					margin-top 80px
+
+					& + li.item
+						margin-top 0px
+
+				> h4
+					color white
+					font-weight 600
+					margin-bottom 30px
+
+				> a
+					color white
+					text-decoration underline
+					font-size .8em
